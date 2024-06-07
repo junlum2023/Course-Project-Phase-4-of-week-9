@@ -8,7 +8,7 @@ def CreateUsers():
         if (username.upper() == "END"):
             break
         userpwd = GetUserPassword
-        userrole = GetUseRole()
+        userrole = GetUserRole()
         UserDetail = username + "|" + userpwd + "|" + userrole + "\n"
         UserFile.write(UserDetail)
         
