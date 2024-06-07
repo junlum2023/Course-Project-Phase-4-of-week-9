@@ -7,7 +7,7 @@ def CreateUsers():
         username = GetUserName()
         if (username.upper() == "END"):
             break
-        userpwd = GetUserPassword()
+        userpwd = GetUserPassword
         userrole = GetUseRole()
         UserDetail = username + "|" + userpwd + "|" + userrole + "\n"
         UserFile.write(UserDetail)
@@ -159,7 +159,7 @@ if __name__ == "__main__":
     DetailsPrinted = False
     Emptotals = {}
     if (UserRole.upper() == "NONE"):
-        print(UserName, "is invalid.")
+        print(username, "is invalid.")
         
     else:   
         if (UserRole.upper() == "ADMIN"):
