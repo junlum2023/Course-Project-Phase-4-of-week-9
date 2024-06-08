@@ -9,6 +9,7 @@ def CreateUsers():
             break
         userpwd = GetUserPassword
         userrole = GetUserRole()
+        
         UserDetail = username + "|" + userpwd + "|" + userrole + "\n"
         UserFile.write(UserDetail)
         
@@ -24,7 +25,7 @@ def GetUserPassword():
     return pwd
 
 def GetUserRole():
-    userrole = input("Entera role (Admin or User): ")
+    userrole = input("Enter role (Admin or User): ")
     while True:
         if (userrole.upper() == "ADMIN" or userrole.upper() == "USER"):
             return userrole
@@ -56,11 +57,11 @@ def Login():
          if not UserDetail:
             return UserRole, UserName, UserPwd
          UserDetail = UserDetail.replace("\n", "")
+         
          UserList = UserDetail.split("|")
          if UserName == UserList[0] and UserPwd == UserList[1]:
              UserRole = UserList[2] 
-             return UserRole, UserName
-           
+             return UserRole, UserName      
      return UserRole, UserName
       
 def GetEmpname():
@@ -107,20 +108,19 @@ def printinfo(EmpDetailList):
         except ValueError:
             print("invalid date format. Try again.")
             print()
-            continue
-        
+            continue    
     while True:
          EmpDetail = EmpFile.readline()
          if not EmpDetail:
              break
          EmpDetail = EmpDetail.replace("\n", "")
+         
          EmpList = EmpDetail.split("|")
          fromdate = EmpList[0]
          if (str(rundate).upper() != "ALL"):
              checkdate = datetime.strptime(fromdate, "%m/%d/%y")
              if (checkdate < rundate):
                  continue 
-             
              todate = EmpList[1]
              empname = EmpList[2]
              hours = float(EmpList[3])
@@ -134,7 +134,7 @@ def printinfo(EmpDetailList):
              TotTax += incometax
              Totneypay += netpay 
              EmpTotals["TotEmp"] = TotEmployees
-             EmpTotals["TotHrs"] = TotHours
+             EmpTotals["Tothrs"] = TotHours
              EmpTotals["TotGrossPay"] = TotGrossPay
              EmpTotals["TotTax"] = TotTax
              EmpTotals["TotNetPay"] = TotNetPay
@@ -143,6 +143,7 @@ def printinfo(EmpDetailList):
              PrintTotals(EmpTotals)
          else:
               print("No detail information to print")
+              
 def PrintTotals(EmpTotals):
     print()
     print(f'Total number of employees: {EmpTotals["TotEmp"]}')
