@@ -1,0 +1,9 @@
+user|name|user
+bill|name|user
+frank|frank1|admin
+jun|jun1|Admin
+jun|jun1|admin
+bill|bill1|Admin
+jun|jun1|admin
+jun|jun1|admin
+bob|bob2|user

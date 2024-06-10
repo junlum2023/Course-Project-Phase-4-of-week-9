@@ -8,6 +8,7 @@ def CreateUsers():
         if (username.upper() == "END"):
             break
         userpwd = GetUserPassword
+        userpwd = GetUserPassword()
         userrole = GetUserRole()
         
         UserDetail = username + "|" + userpwd + "|" + userrole + "\n"
@@ -36,7 +37,7 @@ def GetUserRole():
 def printuserinfo():
     UserFile = open("Users.txt", "r")
     while True:
-        UserDetail = UserFile.readlink()
+        UserDetail = UserFile.readline()
         if not UserDetail:
            break
         UserDetail = UserDetail.replace("\n", "")
