@@ -7,3 +7,6 @@ bill|bill1|Admin
 jun|jun1|admin
 jun|jun1|admin
 bob|bob2|user
+tim|tim1|admin
+jun1|jun1|admin
+jess|jess1|admin

@@ -159,7 +159,7 @@ if __name__ == "__main__":
     print("Data Entry")
     UserRole, username = Login()
     DetailsPrinted = False
-    Emptotals = {}
+    EmpTotals = {}
     if (UserRole.upper() == "NONE"):
         print(username, "is invalid.")
         
