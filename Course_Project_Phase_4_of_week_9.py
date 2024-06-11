@@ -92,7 +92,7 @@ def CalcTaxAndNetPay(hours, hourlyrate, taxrate):
     netpay = grosspay - incometax
     return grosspay, incometax, netpay
  
-def printinfo(EmpDetailList):
+def printinfo(DetailPrinted):
     TotEmployees = 0
     TotHours = 0.00
     TotGrosspay = 0.00
@@ -143,7 +143,7 @@ def printinfo(EmpDetailList):
          if (DetailsPrinted):
              PrintTotals(EmpTotals)
          else:
-              print("No detail information to print")
+             print("No detail information to print")
               
 def PrintTotals(EmpTotals):
     print()
