@@ -10,3 +10,4 @@ bob|bob2|user
 tim|tim1|admin
 jun1|jun1|admin
 jess|jess1|admin
+jay|jay1|Admin
